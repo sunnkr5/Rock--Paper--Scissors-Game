@@ -99,4 +99,7 @@ if (humanScore > computerScore) {
 }
 }
 //Calling playGame function
-playGame();
+// Wait for the document to be fully loaded before running the game
+document.addEventListener('DOMContentLoaded', function() {
+    playGame();  // Call the playGame function here after page content is loaded
+  });
