@@ -7,7 +7,7 @@ return computerChoice;
 
 //function to get human choice
 function getHumanChoice() {
-    const humanChoice = prompt("Choose between rock, paper, or scissors:").toLowerCase();
+    const humanChoice = prompt("Open Console to Play \nChoose between rock, paper, or scissors:").toLowerCase();
 //error handling without using loop
     if (["rock", "paper", "scissors"].includes(humanChoice)) {
         return humanChoice;
