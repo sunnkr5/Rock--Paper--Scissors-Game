@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        text-align: center;
-    }
-
-    button {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <h1>Rock, Paper, Scissors Game</h1>
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
 
-  <h1>Welcome to Rock Paper Scissors Game!</h1>
-  <p>Open the console to play the game!</p>
-  <button class="rock">rock</button>
-  <button class="paper">paper</button>
-  <button class="scissors">scissors</button>
-  <div class="result"></div>
+       
+    <!-- Result display -->
+    <div class="result"></div>
 
+    <!-- Replay button -->
+    <button class="replay" style="display: none;">Replay</button>
 
-  <!-- This script contains the logic for the game -->
-  <script src="rockgame.js"></script>
-  
+    <script src="rockgame.js"></script>
 </body>
 </html>
