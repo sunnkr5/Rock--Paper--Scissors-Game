@@ -52,40 +52,7 @@ if (humanChoice === computerChoice) {
 }
 
 
-//playing game for 5 times without using loop
-function playGame() {
-    console.log("Welcome to Rock Paper Scissors Game!");
-    console.log("------------------------------------");
 
-const humanSelection1 = getHumanChoice();
-const computerSelection1 = getComputerChoice();
-playRound(humanSelection1, computerSelection1);
-console.log(`1st Round Score - You: ${humanScore}, Computer: ${computerScore}`);
-console.log("----------------------------------------------------");
-
-const humanSelection2 = getHumanChoice();
-const computerSelection2 = getComputerChoice();
-playRound(humanSelection2, computerSelection2);
-console.log(`2nd Round Score - You: ${humanScore}, Computer: ${computerScore}`);
-console.log("----------------------------------------------------");
-
-const humanSelection3 = getHumanChoice();
-const computerSelection3 = getComputerChoice();
-playRound(humanSelection3, computerSelection3);
-console.log(`3rd Round Score - You: ${humanScore}, Computer: ${computerScore}`);
-console.log("----------------------------------------------------");
-
-const humanSelection4 = getHumanChoice();
-const computerSelection4 = getComputerChoice();
-playRound(humanSelection4, computerSelection4);
-console.log(`4th Round Score - You: ${humanScore}, Computer: ${computerScore}`);
-console.log("----------------------------------------------------");
-
-const humanSelection5 = getHumanChoice();
-const computerSelection5 = getComputerChoice();
-playRound(humanSelection5, computerSelection5);
-console.log(`5th Round Score - You: ${humanScore}, Computer: ${computerScore}`);
-console.log("----------------------------------------------------");
 
 
 // Output final scores (optional)
