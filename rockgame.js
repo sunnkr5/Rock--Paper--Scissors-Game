@@ -11,14 +11,12 @@ let computerScore = 0;
 let roundsPlayed = 0;
 const maxRounds = 5;
 
-// Logic to play a single round
+// Function to play a single round
 function playRound(playerChoice) {
     const computerChoice = getComputerChoice();  // Get computer choice
-    console.log("Your choice:", playerChoice);  // For debugging
-    console.log("Computer choice:", computerChoice);  // For debugging
-
     let resultMessage = `Player chose: ${playerChoice} <br>Computer chose: ${computerChoice} <br>`;
 
+    // Determine the winner of the round
     if (playerChoice === computerChoice) {
         resultMessage += "It's a Tie!<br>";
     } else if (
@@ -26,27 +24,32 @@ function playRound(playerChoice) {
         (playerChoice === "scissors" && computerChoice === "paper") ||
         (playerChoice === "paper" && computerChoice === "rock")
     ) {
-        resultMessage += "You won!<br>";
+        resultMessage += "You won this round!<br>";
         humanScore++;
     } else {
-        resultMessage += "Computer won!<br>";
+        resultMessage += "Computer won this round!<br>";
         computerScore++;
     }
 
-    // Output the current score
-    resultMessage += `<br>Current Score - You: ${humanScore}, Computer: ${computerScore}<br><br>`;
-
+    // Update the score and rounds
     roundsPlayed++;
 
+    // Display the score and rounds left
+    let scoreMessage = `<br>Score - You: ${humanScore}, Computer: ${computerScore}`;
+    let roundsLeftMessage = `<br>Rounds Left: ${maxRounds - roundsPlayed}`;
+
+    resultMessage += scoreMessage + roundsLeftMessage + "<br><br>";
+
     if (roundsPlayed >= maxRounds) {
+        // Determine final game result
         if (humanScore > computerScore) {
-            resultMessage += "After 5 rounds, you win the game!";
+            resultMessage += "<br><strong>You win the game!</strong>";
         } else if (computerScore > humanScore) {
-            resultMessage += "After 5 rounds, computer wins the game!";
+            resultMessage += "<br><strong>Computer wins the game!</strong>";
         } else {
-            resultMessage += "After 5 rounds, it's a tie game!";
+            resultMessage += "<br><strong>It's a tie game!</strong>";
         }
-        // Disable buttons and show the replay button after 5 rounds
+        // Disable the game buttons and show the Replay button
         disableButtons();
         showReplayButton();
     }
@@ -60,7 +63,7 @@ function playRound(playerChoice) {
 function disableButtons() {
     const buttons = document.querySelectorAll("button");
     buttons.forEach(button => {
-        if (button !== document.querySelector(".replay")) {  // Exclude the Replay button from being disabled
+        if (button !== document.querySelector(".replay")) {
             button.disabled = true;
         }
     });
@@ -78,9 +81,12 @@ function resetGame() {
     computerScore = 0;
     roundsPlayed = 0;
 
-    // Reset the result div
+    // Reset the result div and score
     const resultDiv = document.querySelector(".result");
     resultDiv.innerHTML = "";
+
+    const scoreDiv = document.querySelector(".score");
+    scoreDiv.innerHTML = "";
 
     // Hide the Replay button
     const replayButton = document.querySelector(".replay");

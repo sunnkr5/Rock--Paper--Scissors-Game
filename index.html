@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <!-- Link to the external CSS file -->
+    <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Rock, Paper, Scissors Game</h1>
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissors">Scissors</button>
 
-    <!-- Result display -->
+    <!-- Instructions for the Game -->
+    <div class="instructions">
+        <h2>How to Play</h2>
+        <p>Choose either Rock, Paper, or Scissors to play against the computer.</p>
+        <ul>
+            <li>Rock beats Scissors</li>
+            <li>Scissors beats Paper</li>
+            <li>Paper beats Rock</li>
+        </ul>
+        <p>Click one of the buttons below to start the game. You will play 5 rounds, and the winner will be announced at the end.</p>
+    </div>
+
+    <!-- Game Buttons -->
+    <div class="choices">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
+    </div>
+
+    <!-- Result Display -->
     <div class="result"></div>
+    <div class="score"></div>
 
-    <!-- Replay button (hidden by default) -->
+    <!-- Replay Button -->
     <button class="replay">Replay</button>
 
     <script src="rockgame.js"></script>
