@@ -64,6 +64,27 @@ if (humanScore > computerScore) {
 } else {
     console.log("It's a tie game!");
 }
+
+const rockBtn = document.querySelector(".rock");
+const paperBtn = document.querySelector(".paper");
+const scissorsBtn = document.querySelector(".scissors");
+const result1 = document.querySelector(".result1");
+
+//button.addEventListener("click", myFunction);
+rockBtn.addEventListener("click", playRound() {
+    // Output final scores (optional)
+console.log(`Final Score - You: ${humanScore}, Computer: ${computerScore}`);
+if (humanScore > computerScore) {
+    console.log("You win the game!");
+} else if (computerScore > humanScore) {
+    console.log("Computer wins the game!");
+} else {
+    console.log("It's a tie game!");
 }
+});
+paperBtn.addEventListener("click", playRound());
+scissorsBtn.addEventListener("click", playRound());
+
+
 //Calling playGame function
 playGame();
