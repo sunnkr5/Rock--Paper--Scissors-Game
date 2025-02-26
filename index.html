@@ -4,23 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Rock, Paper, Scissors Game</h1>
@@ -28,12 +13,11 @@
     <button class="paper">Paper</button>
     <button class="scissors">Scissors</button>
 
-       
     <!-- Result display -->
     <div class="result"></div>
 
-    <!-- Replay button -->
-    <button class="replay" style="display: none;">Replay</button>
+    <!-- Replay button (hidden by default) -->
+    <button class="replay">Replay</button>
 
     <script src="rockgame.js"></script>
 </body>
